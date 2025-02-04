@@ -78,13 +78,13 @@ jobs:
     - name: Build demo apps
       run: make demo
 
-    - name: Install prysk
-      run: pip install prysk
+    - name: Install cram
+      run: pip install cram
 
     - name: Run the tests
       run: |
         cd test
-        prysk *.t
+        cram *.t
 
   dist:
     needs: [build]
